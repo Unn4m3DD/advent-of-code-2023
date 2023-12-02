@@ -1,14 +1,22 @@
-use std::env;
+use std::{env, time::Instant};
 
 use advent_of_code_2022_rust::*;
 
 fn main() {
-    let functions = [
-      day_01,
-      day_02,
-    ];
+    let functions = [day_01, day_02];
     let args: Vec<String> = env::args().collect();
-    functions
-        .get(args[1].parse::<usize>().unwrap() - 1)
-        .unwrap()();
+    match args.get(1) {
+        Some(day) => {
+            let now = Instant::now();
+            functions.get(day.parse::<usize>().unwrap() - 1).unwrap()();
+            println!("Day {} took {:?}ms", day, now.elapsed().as_millis());
+        }
+        None => {
+            functions.iter().enumerate().for_each(|(i, f)| {
+                let now = Instant::now();
+                f();
+                println!("Day {} took {:?}ms", i + 1, now.elapsed().as_millis());
+            });
+        }
+    };
 }
