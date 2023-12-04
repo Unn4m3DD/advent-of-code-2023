@@ -3,7 +3,11 @@ use std::{env, time::Instant};
 use advent_of_code_2022_rust::*;
 
 fn main() {
-    let functions = [day_01, day_02];
+    let functions = [
+      day_01, 
+      day_02,
+      day_03,
+    ];
     let args: Vec<String> = env::args().collect();
     match args.get(1) {
         Some(day) => {
