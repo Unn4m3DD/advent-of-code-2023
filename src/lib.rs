@@ -6,3 +6,5 @@ mod day_03;
 pub use day_03::run as day_03;
 mod day_04;
 pub use day_04::run as day_04;
+mod day_05;
+pub use day_05::run as day_05;
