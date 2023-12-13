@@ -14,6 +14,7 @@ fn main() {
       day_08,
       day_09,
       day_10,
+      day_11,
     ];
     let args: Vec<String> = env::args().collect();
     match args.get(1) {
