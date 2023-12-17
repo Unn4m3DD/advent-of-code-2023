@@ -69,7 +69,7 @@ pub fn run_a(input: &str) {
     println!("Day 10a: {}", pipe_length / 2);
 }
 
-fn expand_reaches_out(
+fn _expand_reaches_out(
     grid: Vec<Vec<Vec<(i64, i64)>>>,
     start: (i64, i64),
     bounds: (i64, i64, i64, i64),
@@ -135,19 +135,19 @@ pub fn run_b(input: &str) {
             break;
         }
     }
-    for y in 0..grid.len() {
-        for x in 0..grid[y].len() {
-            if pipe.contains(&(x as i64, y as i64)) {
-                print!("#");
-            } else if grid[y][x].len() == 0 {
-                print!(".");
-            } else {
-                print!(" ");
-            }
-        }
-        println!();
-    }
-    println!();
+    // for y in 0..grid.len() {
+    //     for x in 0..grid[y].len() {
+    //         if pipe.contains(&(x as i64, y as i64)) {
+    //             print!("#");
+    //         } else if grid[y][x].len() == 0 {
+    //             print!(".");
+    //         } else {
+    //             print!(" ");
+    //         }
+    //     }
+    //     println!();
+    // }
+    // println!();
     // let (min_x, min_y, max_x, max_y) = pipe.iter().fold((i64::MAX, i64::MAX, 0, 0), |acc, next| {
     //     (
     //         acc.0.min(next.0),
@@ -171,7 +171,7 @@ pub fn run_b(input: &str) {
 
 pub fn run() {
     let _challenge_input = include_str!("../inputs/day_10/challenge.txt");
-    let test_input = include_str!("../inputs/day_10/test.txt");
+    let _test_input = include_str!("../inputs/day_10/test.txt");
     run_a(_challenge_input);
     run_b(_challenge_input);
 }
