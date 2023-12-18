@@ -49,7 +49,6 @@ pub fn run_b(input: &str) {
             }
         }
     }
-    println!("Day 04b: {:?}", result);
     println!("Day 04b: {:?}", result.iter().sum::<i64>());
 }
 
