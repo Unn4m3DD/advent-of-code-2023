@@ -34,3 +34,5 @@ mod day_17;
 pub use day_17::run as day_17;
 mod day_18;
 pub use day_18::run as day_18;
+mod day_19;
+pub use day_19::run as day_19;
